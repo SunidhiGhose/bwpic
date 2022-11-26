@@ -11,7 +11,7 @@ app = Flask(__name__)
 # Open and redirect to default upload webpage
 @app.route('/')
 def load_form():
-    return render_template('upload.html')
+    return render_template('index.html')
 
 # Function to upload image and redirect to new webpage
 @app.route('/gray', methods=['POST'])
@@ -25,7 +25,7 @@ def upload_image():
         # ends here
 
     display_message = 'Image successfully uploaded and displayed below'
-    return render_template('upload.html', filename=filename, message = display_message)
+    return render_template('index.html', filename=filename, message = display_message)
 
 
 # Write the make_grayscale() function below
